@@ -4,11 +4,11 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
-  IonButtons,
-  IonButton
+  IonButtons
 } from '@ionic/react'
 import React from 'react'
 import { Formik, Form, Field, ErrorMessage, FormikErrors } from 'formik'
+import AuthButton from 'auth/AuthButton'
 
 const encode = (data: any) => {
   return Object.keys(data)
@@ -27,10 +27,7 @@ const Home: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
-            <IonButton>
-              {' '}
-              <div data-netlify-identity-menu></div>
-            </IonButton>
+            <AuthButton />
           </IonButtons>
           <IonTitle>EVG</IonTitle>
         </IonToolbar>
